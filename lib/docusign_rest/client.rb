@@ -417,7 +417,7 @@ module DocusignRest
 
         # append the fully build string to the array
         doc_signers << doc_signer
-        p "doc_signer"
+        puts "doc_signer"
         p doc_signer
       end
       doc_signers
@@ -793,7 +793,7 @@ module DocusignRest
                   uri, post_body, file_params, headers(options[:headers])
                 )
       p "REquest ----------"
-      p request
+      puts request
       response = http.request(request)
       generate_log(request, response, uri)
       JSON.parse(response.body)
